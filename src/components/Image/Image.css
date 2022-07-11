@@ -1,0 +1,12 @@
+.img-row {
+  -moz-column-width: 18em;
+  -webkit-column-width: 18em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+}
+
+.img-item {
+  display: inline-block;
+  padding: 0.25rem;
+  width: 100%;
+}
