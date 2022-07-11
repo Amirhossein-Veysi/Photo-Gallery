@@ -1,11 +1,15 @@
-import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css';
+import React from "react";
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+//components
+import Header from "./components/Header/";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      PhoGa Represents.
+      <Header />
     </div>
   );
-}
+};
 
 export default App;
