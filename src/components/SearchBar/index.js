@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ setTerm }) => {
   const [query, setQuery] = useState("");
 
   const handleChange = (e) => {
     setQuery(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTerm(query);
   };
 
   return (
@@ -18,11 +23,16 @@ const SearchBar = () => {
         }}
       >
         <div className="row w-100">
-          <form className="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+          <form
+            className="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group d-flex">
               <input
                 placeholder="Search"
                 className="form-control rounded-0 rounded-start"
+                value={query}
+                onChange={handleChange}
               />
               <button
                 type="submit"
